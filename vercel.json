@@ -1,5 +1,13 @@
 {
+  "functions": {
+    "api/og.js": {
+      "runtime": "edge"
+    }
+  },
   "rewrites": [
-    { "source": "/share/(.*)", "destination": "/api/share/$1" }
+    {
+      "source": "/share/(.*)",
+      "destination": "/api/share/$1"
+    }
   ]
 }

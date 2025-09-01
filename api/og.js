@@ -13,9 +13,8 @@ export default async function handler(req) {
   const { searchParams } = new URL(req.url);
   const id = searchParams.get("id") || "item";
 
-  const candidates = (suffix) => [base(`images/${id}-${suffix}.jpg`), base(`images/${id}-${suffix}.png`)];
-  const locationUrl = candidates("location")[0];
-  const wardrobeUrl = candidates("wardrobe")[0];
+  const locationUrl = base(`images/${id}-location.jpg`);
+  const wardrobeUrl = base(`images/${id}-wardrobe.jpg`);
 
   return new ImageResponse(
     (
