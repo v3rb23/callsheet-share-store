@@ -13,7 +13,7 @@ export default async function handler(req, res) {
 <meta property="og:type" content="website">
 <meta property="og:title" content="Callsheet • ${cleanId} — Location & Wardrobe">
 <meta property="og:description" content="Preview images for ${cleanId}.">
-<meta property="og:url" content="https://${req.headers.host}/share/${encodeURIComponent(cleanId)}">
+<meta property="og:url" content="https://${req.headers.host}/api/share/${encodeURIComponent(cleanId)}">
 <meta property="og:image" content="${og}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="${og}">

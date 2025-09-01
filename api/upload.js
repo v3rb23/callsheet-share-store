@@ -44,7 +44,7 @@ export default async function handler(req, res) {
     await commitBase64(octokit, locPath, loc.base64, `Upload location for ${id}`);
     await commitBase64(octokit, warPath, war.base64, `Upload wardrobe for ${id}`);
 
-    const shareUrl = `https://${req.headers.host}/share/${encodeURIComponent(id)}`;
+    const shareUrl = `https://${req.headers.host}/api/share/${encodeURIComponent(id)}`;
     res.status(200).json({ ok: true, shareUrl });
   } catch (e) {
     console.error(e);
